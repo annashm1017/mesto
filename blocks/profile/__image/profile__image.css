@@ -1,0 +1,6 @@
+.profile__image {
+  background-size: contain;
+  width: 120px;
+  min-height: 120px;
+  border-radius: 120px;
+}
