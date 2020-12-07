@@ -9,6 +9,7 @@
   text-align: center;
   margin-bottom: 36px;
   margin-top: 14px;
+  max-width: 220px;
 }
 
 @media all and (min-width: 768px) {
@@ -16,7 +17,6 @@
     position: relative;
     right: 305px;
     top: 53px;
-    overflow: visible;
   }
 }
 

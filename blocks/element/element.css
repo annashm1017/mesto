@@ -1,0 +1,23 @@
+.element {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (min-width: 768px) {
+  .element {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 17px;
+    width: 581px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .element {
+    grid-template-columns: repeat(3, 1fr);
+    width: 880px;
+  }
+}

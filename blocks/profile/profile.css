@@ -1,7 +1,7 @@
 .profile {
   margin: auto;
   padding-top: 42px;
-  width: 282px;
+  min-width: 282px;
   min-height: 286px;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   .profile {
     flex-direction: row;
     align-items: flex-start;
-    width: 768px;
+    justify-content: center;
     min-height: 120px;
     margin-left: 27px;
   }
@@ -21,7 +21,8 @@
 @media all and (min-width: 1024px) {
   .profile {
     padding-top: 40px;
-    width: 880px;
+    justify-content: flex-start;
+    max-width: 880px;
     margin: auto;
   }
 }

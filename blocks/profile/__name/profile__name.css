@@ -7,7 +7,7 @@
   white-space: nowrap;
   overflow: hidden;
   margin: 0 auto;
-  width: 190px;
+  max-width: 190px;
 }
   
 @media all and (min-width: 768px) {

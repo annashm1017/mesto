@@ -1,0 +1,11 @@
+.elements {
+  padding-top: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (min-width: 1024px) {
+  .elements {
+    padding-top: 50px;
+  }
+}
