@@ -1,0 +1,81 @@
+.popup__close {
+  background-image: url("../../../images/close-icon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotate(45deg);
+  width: 26px;
+  height: 26px;
+  color: #fff;
+  position: fixed;
+  z-index: 2;
+  top: 73px;
+  left: 275px;
+}
+
+.popup__close:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+@media all and (min-width: 375px) {
+  .popup__close {
+    left: 305px;
+  }
+}
+
+@media all and (min-width: 425px) {
+  .popup__close {
+    left: 325px;
+  }
+}
+
+@media all and (min-width: 500px) {
+  .popup__close {
+    left: 365px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .popup__close {
+    left: 415px;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .popup__close {
+    left: 465px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .popup__close {
+    width: 40px;
+    height: 40px;
+    top: 155px;
+    left: 595px;
+  }
+}
+
+@media all and (min-width: 850px) {
+  .popup__close {
+    left: 640px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .popup__close {
+    left: 730px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .popup__close {
+    left: 850px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .popup__close {
+    left: 935px;
+  }
+}

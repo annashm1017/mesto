@@ -1,0 +1,12 @@
+.normal-font {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+@media all and (min-width: 1024px) {
+  .normal-font {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

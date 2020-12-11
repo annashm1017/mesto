@@ -3,9 +3,6 @@
   line-height: 100%;
   font-weight: 900;
   width: 190px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   margin-left: 21px;
   margin-top: 25px;
 }

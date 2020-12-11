@@ -1,11 +1,5 @@
 .profile__info {
   color: #fff;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 400;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   text-align: center;
   margin-bottom: 36px;
   margin-top: 14px;
@@ -22,8 +16,6 @@
 
 @media all and (min-width: 1024px) {
   .profile__info {
-    font-size: 18px;
-    line-height: 22px;
     margin-top: 16px;
     top: 68px;
   }
