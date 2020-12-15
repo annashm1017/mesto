@@ -4,9 +4,10 @@
   height: 18px;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
-  left: 215px;
-  bottom: 25px;
+  border: none;
+  background-color: #000;
+  align-self: center;
+  transition: 0s opacity;
 }
 
 .profile__edit-button:hover {
@@ -16,14 +17,12 @@
 
 @media all and (min-width: 768px) {
   .profile__edit-button {
-    left: 230px;
+    margin-left: 18px;
   }
 }
 
 @media all and (min-width: 1024px) {
   .profile__edit-button {
-    left: 340px;
-    bottom: 30px;
     width: 24px;
     height: 24px;
   }

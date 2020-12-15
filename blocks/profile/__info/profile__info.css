@@ -4,19 +4,25 @@
   margin-bottom: 36px;
   margin-top: 14px;
   max-width: 220px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
 }
 
 @media all and (min-width: 768px) {
   .profile__info {
-    position: relative;
-    right: 305px;
-    top: 53px;
+    margin-top: 16px;
+    margin-bottom: 25px;
   }
 }
 
 @media all and (min-width: 1024px) {
   .profile__info {
-    margin-top: 16px;
-    top: 68px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 25px;
   }
 }

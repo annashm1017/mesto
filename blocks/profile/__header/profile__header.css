@@ -1,12 +1,18 @@
 .profile__header {
   margin-top: 26px;
   min-width: 220px;
-  max-height: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
 @media all and (min-width: 768px) {
   .profile__header {
-    height: 73px;
     min-width: 336px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .profile__header {
+    width: 580px;
   }
 }

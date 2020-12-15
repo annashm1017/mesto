@@ -4,11 +4,16 @@
   margin-top: 0;
   margin-bottom: 0;
   min-width: 282px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
 }
 
 @media all and (min-width: 1024px) {
   .footer__author {
     margin-left: 7%;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
