@@ -1,0 +1,9 @@
+.popup__container_profile {
+  min-width: 282px; 
+}
+
+@media all and (min-width: 768px) {
+  .popup__container_profile {
+    min-width: 430px;
+  }
+}

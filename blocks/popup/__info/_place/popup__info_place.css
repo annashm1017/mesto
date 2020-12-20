@@ -1,0 +1,16 @@
+.popup__info_place {
+  font-size: 12px;
+  line-height: 120%;
+  margin-bottom: 20px;
+  height: 24px;
+  min-width: 200px;
+}
+
+@media all and (min-width: 768px) {
+  .popup__info_place {
+    font-size: 14px;
+    height: 27px;
+    min-width: 358px;
+    margin-bottom: 30px;
+  }
+}

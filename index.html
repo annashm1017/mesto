@@ -24,8 +24,9 @@
       </section>
       <section class="cards">
         <ul class="card">
-           <li class="card__one">
+           <!--<li class="card__one">
               <img src="./images/elbrus.jpeg" alt="Эльбрус" class="card__image">
+              <button type="button" class="card__trash"></button>
               <div class="card__text">
                  <h2 class="card__name">Эльбрус</h2>
                  <button type="button" class="card__like"></button>
@@ -33,6 +34,7 @@
            </li>
            <li class="card__one">
               <img src="./images/moscow.jpeg" alt="Москва" class="card__image">
+              <button type="button" class="card__trash"></button>
               <div class="card__text">
                  <h2 class="card__name">Москва</h2>
                  <button type="button" class="card__like"></button>
@@ -40,6 +42,7 @@
            </li>
            <li class="card__one">
               <img src="./images/kurskaya-kosa.jpeg" alt="Курская коса" class="card__image">
+              <button type="button" class="card__trash"></button>
               <div class="card__text">
                  <h2 class="card__name">Курская коса</h2>
                  <button type="button" class="card__like"></button>
@@ -47,6 +50,7 @@
            </li>
            <li class="card__one">
               <img src="./images/baikal.jpeg" alt="Байкал" class="card__image">
+              <button type="button" class="card__trash"></button>
               <div class="card__text">
                  <h2 class="card__name">Байкал</h2>
                  <button type="button" class="card__like"></button>
@@ -54,6 +58,7 @@
            </li>
            <li class="card__one">
               <img src="./images/st-petersburg.jpeg" alt="Санкт-Петербург" class="card__image">
+              <button type="button" class="card__trash"></button>
               <div class="card__text">
                  <h2 class="card__name">Санкт-Петербург</h2>
                  <button type="button" class="card__like"></button>
@@ -61,26 +66,37 @@
            </li>
            <li class="card__one">
               <img src="./images/kamchatka.jpeg" alt="Камчатка" class="card__image">
+              <button type="button" class="card__trash"></button>
               <div class="card__text">
                  <h2 class="card__name">Камчатка</h2>
                  <button type="button" class="card__like"></button>
               </div>
-           </li>
+           </li>-->
         </ul>
       </section>
-      <article class="popup">
-        <form name="container" class="popup__container">
+      <article id="popup-profile" class="popup">
+        <form name="container" class="popup__container popup__container_profile">
            <button type="button" class="popup__close"></button>
-           <h2 class="popup__title">Редактировать профиль</h2>
-           <input id="popup-name" type="text" name="name" placeholder="Имя" class="popup__info">
-           <input id="popup-job" type="text" name="job" placeholder="О себе" class="popup__info">
-           <button class="popup__submit">Сохранить</button>
+           <h2 class="popup__title popup__title_profile">Редактировать профиль</h2>
+           <input id="popup-name" type="text" name="name" placeholder="Имя" class="popup__info popup__info_profile">
+           <input id="popup-job" type="text" name="job" placeholder="О себе" class="popup__info popup__info_profile">
+           <button class="popup__submit popup__submit_profile">Сохранить</button>
         </form>
+      </article>
+      <article id="popup-place" class="popup">
+         <form name="new-place" class="popup__container popup__container_place">
+            <button type="button" class="popup__close"></button>
+            <h2 class="popup__title popup__title_place">Новое место</h2>
+            <input id="popup-title" type="text" name="title" placeholder="Название" class="popup__info popup__info_place">
+            <input id="popup-link" type="text" name="link" placeholder="Ссылка на картинку" class="popup__info popup__info_place">
+            <button class="popup__submit popup__submit_place">Создать</button>
+         </form>
       </article>
    </main>
    <footer class="footer">
      <p class="footer__author">&COPY; 2020 Mesto Russia</p>
    </footer>
-  <script src="./scripts/index.js"></script>   
+  <script src="./scripts/constant.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>

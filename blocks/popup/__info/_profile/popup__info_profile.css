@@ -1,0 +1,13 @@
+.popup__info_profile {
+  height: 27px;
+  min-width: 238px;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 30px;
+}
+
+@media all and (min-width: 768px) {
+  .popup__info_profile {
+    min-width: 358px;
+  }
+}

@@ -1,0 +1,12 @@
+.popup__title_profile {
+    margin-top: 25px;
+    margin-bottom: 75px;
+}
+
+@media all and (min-width: 768px) {
+  .popup__title_profile {
+    margin-top: 34px;
+    margin-bottom: 54px;
+    margin-right: 52px;
+  }
+}
