@@ -1,5 +1,8 @@
 .popup__container_place {
   min-width: 240px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 @media all and (min-width: 768px) {

@@ -7,4 +7,16 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.popup > .popup__container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.popup:hover > .popup__container {
+  visibility: visible;
+  opacity: 1;
 }

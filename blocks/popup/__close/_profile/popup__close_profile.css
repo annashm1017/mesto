@@ -1,0 +1,15 @@
+.popup__close_profile {
+  right: 0;
+  top: -45px;
+  width: 26px;
+  height: 26px;
+}
+
+@media all and (min-width: 768px) {
+  .popup__close_profile {
+    right: -40px;
+    top: -40px;
+    width: 40px;
+    height: 40px;
+  }
+}

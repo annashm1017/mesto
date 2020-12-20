@@ -1,6 +1,28 @@
-//Добавление карточек через js
+//Добавление карточек через js + кнопка лайк + удаление карточки + открытие попапа с картинкой
 let card = document.querySelector('.card');
+let callPopupPhoto = document.querySelector('#photo');
+let callImagePopup = callPopupPhoto.querySelector('.popup__image');
+let callTitlePopup = callPopupPhoto.querySelector('.popup__description');
 
+//Popup редактирования профиля
+let callPopupProfile = document.querySelector('#popup-profile');
+let editButton = document.querySelector('.profile__edit-button');
+let closePopupProfile = callPopupProfile.querySelector('.popup__close');
+let popupName = document.querySelector('#popup-name');
+let popupJob = document.querySelector('#popup-job');
+let nameUser = document.querySelector('.profile__name');
+let jobUser = document.querySelector('.profile__info');
+let submitFormProfile = callPopupProfile.querySelector('.popup__container');
+
+//Popup добавления новой карточки
+let callPopupPlace = document.querySelector('#popup-place');
+let addButtonCard = document.querySelector('.profile__add-button');
+let closePopupPlace = callPopupPlace.querySelector('.popup__close');
+let popupTitle = document.querySelector('#popup-title');
+let popupLink = document.querySelector('#popup-link');
+let submitFormPlace = callPopupPlace.querySelector('.popup__container');
+
+//Добавление карточек через js + кнопка лайк + удаление карточки + открытие попапа с картинкой
 function cards (name, link, direction) {
   const listItem = document.createElement('li');
     listItem.classList.add('card__one');
@@ -28,8 +50,8 @@ function cards (name, link, direction) {
   listItem.appendChild(imageItem);
   listItem.appendChild(buttonItem);
   listItem.appendChild(divItem);
-  divItem.appendChild(titleItem);
-  divItem.appendChild(likeItem);
+    divItem.appendChild(titleItem);
+    divItem.appendChild(likeItem);
   card.append(listItem);
 
   if (direction === true) {
@@ -45,6 +67,13 @@ function cards (name, link, direction) {
   buttonItem.addEventListener('click', function (evt) {
     evt.target.parentNode.remove();
   });
+
+  imageItem.addEventListener('click', function (evt) {
+    callPopupPhoto.classList.add('popup_opened');
+    callImagePopup.setAttribute("src", evt.target.getAttribute("src"));
+    callImagePopup.setAttribute("alt", evt.target.getAttribute("alt"));
+    callTitlePopup.textContent = evt.target.getAttribute("alt");
+  });
 };
 
 initialCards.forEach(function (item) {
@@ -52,15 +81,6 @@ initialCards.forEach(function (item) {
 });
 
 //Popup редактирования профиля
-let callPopupProfile = document.querySelector('#popup-profile');
-let editButton = document.querySelector('.profile__edit-button');
-let closePopupProfile = callPopupProfile.querySelector('.popup__close');
-let popupName = document.querySelector('#popup-name');
-let popupJob = document.querySelector('#popup-job');
-let nameUser = document.querySelector('.profile__name');
-let jobUser = document.querySelector('.profile__info');
-let submitFormProfile = callPopupProfile.querySelector('.popup__container');
-
 function editButtonClick() {
   popupName.value = nameUser.textContent;
   popupJob.value = jobUser.textContent;
@@ -70,11 +90,16 @@ function editButtonClick() {
 editButton.addEventListener('click', editButtonClick);
 
 function closePopupClick() {
-  callPopupProfile.classList.remove('popup_opened') | 
-  callPopupPlace.classList.remove('popup_opened');
+  callPopupProfile.classList.remove('popup_opened') | callPopupPlace.classList.remove('popup_opened');
 }
 
 closePopupProfile.addEventListener('click', closePopupClick);
+
+function closePhotoClick() {
+  callPopupPhoto.classList.remove('popup_opened');
+}
+
+callPopupPhoto.addEventListener('click', closePhotoClick);
 
 function handleFormSubmitProfile (evt) {
   evt.preventDefault();
@@ -87,13 +112,6 @@ function handleFormSubmitProfile (evt) {
 submitFormProfile.addEventListener('submit', handleFormSubmitProfile);
 
 //Popup добавления новой карточки
-let callPopupPlace = document.querySelector('#popup-place');
-let addButtonCard = document.querySelector('.profile__add-button');
-let closePopupPlace = callPopupPlace.querySelector('.popup__close');
-let popupTitle = document.querySelector('#popup-title');
-let popupLink = document.querySelector('#popup-link');
-let submitFormPlace = callPopupPlace.querySelector('.popup__container');
-
 function addButtonCardClick() {
   callPopupPlace.classList.add('popup_opened');
 }
