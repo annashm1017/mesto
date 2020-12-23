@@ -1,29 +1,29 @@
 //Добавление карточек через js + кнопка лайк + удаление карточки + открытие попапа с картинкой
-let card = document.querySelector('.card');
-let callPopupPhoto = document.querySelector('#photo');
-let callImagePopup = callPopupPhoto.querySelector('.popup__image');
-let callTitlePopup = callPopupPhoto.querySelector('.popup__description');
+const card = document.querySelector('.card');
+const callPopupPhoto = document.querySelector('#photo');
+const callImagePopup = callPopupPhoto.querySelector('.popup__image');
+const callTitlePopup = callPopupPhoto.querySelector('.popup__description');
 
 //Popup редактирования профиля
-let callPopupProfile = document.querySelector('#popup-profile');
-let editButton = document.querySelector('.profile__edit-button');
-let closePopupProfile = callPopupProfile.querySelector('.popup__close');
-let popupName = document.querySelector('#popup-name');
-let popupJob = document.querySelector('#popup-job');
-let nameUser = document.querySelector('.profile__name');
-let jobUser = document.querySelector('.profile__info');
-let submitFormProfile = callPopupProfile.querySelector('.popup__container');
+const callPopupProfile = document.querySelector('#popup-profile');
+const editButton = document.querySelector('.profile__edit-button');
+const closePopupProfile = callPopupProfile.querySelector('.popup__close');
+const popupName = document.querySelector('#popup-name');
+const popupJob = document.querySelector('#popup-job');
+const nameUser = document.querySelector('.profile__name');
+const jobUser = document.querySelector('.profile__info');
+const submitFormProfile = callPopupProfile.querySelector('.popup__container');
 
 //Popup добавления новой карточки
-let callPopupPlace = document.querySelector('#popup-place');
-let addButtonCard = document.querySelector('.profile__add-button');
-let closePopupPlace = callPopupPlace.querySelector('.popup__close');
-let popupTitle = document.querySelector('#popup-title');
-let popupLink = document.querySelector('#popup-link');
-let submitFormPlace = callPopupPlace.querySelector('.popup__container');
+const callPopupPlace = document.querySelector('#popup-place');
+const addButtonCard = document.querySelector('.profile__add-button');
+const closePopupPlace = callPopupPlace.querySelector('.popup__close');
+const popupTitle = document.querySelector('#popup-title');
+const popupLink = document.querySelector('#popup-link');
+const submitFormPlace = callPopupPlace.querySelector('.popup__container');
 
 //Добавление карточек через js + кнопка лайк + удаление карточки + открытие попапа с картинкой
-function cards (name, link, direction) {
+function createCards (name, link, direction) {
   const listItem = document.createElement('li');
     listItem.classList.add('card__one');
 
@@ -77,7 +77,7 @@ function cards (name, link, direction) {
 };
 
 initialCards.forEach(function (item) {
-  cards(item.name, item.link, true);
+  createCards(item.name, item.link, true);
 });
 
 //Popup редактирования профиля
@@ -123,7 +123,7 @@ closePopupPlace.addEventListener('click', closePopupClick);
 function handleFormSubmitPlace (evt) {
   evt.preventDefault();
 
-  cards(popupTitle.value, popupLink.value, false);
+  createCards(popupTitle.value, popupLink.value, false);
   closePopupClick();
 }
 
