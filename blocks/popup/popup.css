@@ -1,5 +1,4 @@
 .popup {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -7,16 +6,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  transition: visibility 0s, opacity 0.5s linear;
-}
-
-.popup > .popup__container {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-}
-
-.popup:hover > .popup__container {
-  visibility: visible;
-  opacity: 1;
+  transition: opacity 0.5s linear, visibility 0.5s linear 0.5s;
 }
