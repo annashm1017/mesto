@@ -24,16 +24,6 @@
       </section>
       <section class="cards">
         <ul class="card">
-           <template id="card-place">
-              <li class="card__one">
-                 <button type="button" class="card__trash"></button>
-                 <img src="#" alt="#" class="card__image">
-                 <div class="card__text">
-                    <h2 class="card__name"></h2>
-                    <button type="button" class="card__like"></button>
-                 </div>
-              </li>
-           </template>
         </ul>
       </section>
       <article id="popup-profile" class="popup">
@@ -46,7 +36,7 @@
         </form>
       </article>
       <article id="popup-place" class="popup">
-         <form name="new-place" class="popup__container popup__container_place">
+         <form name="newPlace" class="popup__container popup__container_place">
             <button type="button" class="popup__close popup__close_place"></button>
             <h2 class="popup__title popup__title_place">Новое место</h2>
             <input id="popup-title" type="text" name="title" placeholder="Название" class="popup__info popup__info_place">
@@ -65,6 +55,16 @@
    <footer class="footer">
      <p class="footer__author">&COPY; 2020 Mesto Russia</p>
    </footer>
+   <template id="card-place">
+      <li class="card__one">
+         <button type="button" class="card__trash"></button>
+         <img src="#" alt="#" class="card__image">
+         <div class="card__text">
+            <h2 class="card__name"></h2>
+            <button type="button" class="card__like"></button>
+         </div>
+      </li>
+   </template>
   <script src="./scripts/constant.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
