@@ -1,0 +1,11 @@
+.popup-link-error {
+  top: 155px;
+  left: 20px;
+}
+
+@media all and (min-width: 768px) {
+  .popup-link-error {
+    top: 200px;
+    left: 35px;
+  }
+}

@@ -1,0 +1,11 @@
+.popup-name-error {
+  left: 20px;
+  top: 150px;
+}
+
+@media all and (min-width: 768px) {
+  .popup-name-error {
+    left: 35px;
+    top: 140px;
+  }
+}

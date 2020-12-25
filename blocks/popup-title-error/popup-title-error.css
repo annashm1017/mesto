@@ -1,0 +1,11 @@
+.popup-title-error {
+  top: 110px;
+  left: 18px;
+}
+
+@media all and (min-width: 768px) {
+  .popup-title-error {
+    top: 140px;
+    left: 35px;
+  }
+}

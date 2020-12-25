@@ -7,6 +7,7 @@ const titlePopup = popupPhoto.querySelector('.popup__description');
 const popupProfile = document.querySelector('#popup-profile');
 const editingButton = document.querySelector('.profile__edit-button');
 const closingPopupProfile = popupProfile.querySelector('.popup__close');
+const closingAcrossOverlay = document.querySelectorAll('.popup');
 const popupName = document.querySelector('#popup-name');
 const popupJob = document.querySelector('#popup-job');
 const nameUser = document.querySelector('.profile__name');
@@ -117,7 +118,7 @@ closingPopupPlace.addEventListener('click', function() {
 function handleFormSubmitPlace (evt) {
   evt.preventDefault();
 
-  const item = [];
+  const item = {};
   item.name = popupTitle.value;
   item.link = popupLink.value;
 
@@ -129,3 +130,30 @@ function handleFormSubmitPlace (evt) {
 }
 
 submitingFormPlace.addEventListener('submit', handleFormSubmitPlace);
+
+const popups = [];
+popups.push(popupPlace);
+popups.push(popupProfile);
+popups.push(popupPhoto);
+
+function closingPopups(){
+  popups.forEach(function (elementArray){
+    closePopup(elementArray);
+  });
+}
+
+closingAcrossOverlay.forEach(function(closingAcrossOverlay_element){
+  closingAcrossOverlay_element.addEventListener('click', function(evt){
+    if (evt.target.length === undefined){
+      if (!evt.target.classList.value.includes("info") && !evt.target.classList.value.includes("title") ){
+        closingPopups();
+      }
+    }
+  });
+});
+
+document.addEventListener('keydown', function (evt){
+ if (evt.keyCode === 27) {
+  closingPopups();
+ }
+});

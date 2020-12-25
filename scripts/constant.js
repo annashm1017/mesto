@@ -23,4 +23,4 @@ const initialCards = [
         name: 'Камчатка',
         link: './images/kamchatka.jpeg'
     }
-]; 
+];
