@@ -23,9 +23,9 @@ const showInputWithoutError = function(formSelector, inputSelector, config) {
   
 const isInputValid = function(formSelector, inputSelector, config) {
   if (!inputSelector.validity.valid) {
-    showInputError(formSelector, inputSelector, inputSelector.validationMessage);
+    showInputError(formSelector, inputSelector, inputSelector.validationMessage, config);
   } else {
-    showInputWithoutError(formSelector, inputSelector);
+    showInputWithoutError(formSelector, inputSelector, config);
   }
 };
   
@@ -37,7 +37,7 @@ const setEventListeners = function(formSelector, config) {
 
   inputList.forEach(function(inputSelector) {
     inputSelector.addEventListener('input', function() {
-      isInputValid(formSelector, inputSelector);
+      isInputValid(formSelector, inputSelector, config);
   
       switchButton(inputList, buttonElement, config);
     });
