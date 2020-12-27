@@ -7,21 +7,21 @@ const config = {
   errorClass: 'popup__info-error_active'
 };
 
-const showInputError = function(formSelector, inputSelector, errorMessage) {
+const showInputError = function(formSelector, inputSelector, errorMessage, config) {
     const errorElement = formSelector.querySelector(`.${inputSelector.id}-error`);
     inputSelector.classList.add(config.inputErrorClass);
     errorElement.textContent = errorMessage;
     errorElement.classList.add(config.errorClass);
   };
   
-  const showInputWithoutError = function(formSelector, inputSelector) {
+  const showInputWithoutError = function(formSelector, inputSelector, config) {
     const errorElement = formSelector.querySelector(`.${inputSelector.id}-error`);
     inputSelector.classList.remove(config.inputErrorClass);
     errorElement.classList.remove(config.errorClass);
     errorElement.textContent = '';
   };
   
-  const isInputValid = function(formSelector, inputSelector) {
+  const isInputValid = function(formSelector, inputSelector, config) {
     if (!inputSelector.validity.valid) {
       showInputError(formSelector, inputSelector, inputSelector.validationMessage);
     } else {
@@ -29,7 +29,7 @@ const showInputError = function(formSelector, inputSelector, errorMessage) {
     }
   };
   
-  const setEventListeners = function(formSelector) {
+  const setEventListeners = function(formSelector, config) {
     const inputList = Array.from(formSelector.querySelectorAll(config.inputSelector));
     const buttonElement = formSelector.querySelector(config.submitButtonSelector);
   
@@ -44,7 +44,7 @@ const showInputError = function(formSelector, inputSelector, errorMessage) {
     });
   }; 
   
-  function enableValidation () {
+  function enableValidation (config) {
     const formList = Array.from(document.querySelectorAll(config.formSelector));
   
     formList.forEach(function(formSelector) {
@@ -52,7 +52,7 @@ const showInputError = function(formSelector, inputSelector, errorMessage) {
         evt.preventDefault();
       });
   
-      setEventListeners(formSelector);
+      setEventListeners(formSelector, config);
     });
   };
   
@@ -62,7 +62,7 @@ const showInputError = function(formSelector, inputSelector, errorMessage) {
     })
   };
   
-  function switchButton (inputList, buttonElement) {
+  function switchButton (inputList, buttonElement, config) {
     if (isInvalidInput(inputList)) {
       buttonElement.classList.add(config.inactiveButtonClass);
       buttonElement.disabled = true;
@@ -71,3 +71,5 @@ const showInputError = function(formSelector, inputSelector, errorMessage) {
       buttonElement.disabled = false;
     }
   };
+
+  enableValidation(config);

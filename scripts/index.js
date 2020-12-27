@@ -76,7 +76,6 @@ initialCards.forEach(function (item) {
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  enableValidation(config);
   document.addEventListener('keydown', handleEscape);
 }
 
@@ -129,7 +128,7 @@ function handleFormSubmitPlace (evt) {
   item.name = popupTitle.value;
   item.link = popupLink.value;
 
-  const createdCard = createCard(item);
+  const createdCard = getCardElement(item);
   addCard(card, createdCard, false);
   closePopup(popupPlace);
 
