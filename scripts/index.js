@@ -77,6 +77,7 @@ initialCards.forEach(function (item) {
 function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', handleEscape);
+
 }
 
 function closePopup(popup) {
@@ -113,6 +114,15 @@ submitingFormProfile.addEventListener('submit', handleFormSubmitProfile);
 
 function addButtonCardClick() {
   openPopup(popupPlace);
+  checkFreeValuePlace();
+}
+
+function checkFreeValuePlace(){
+  if (popupTitle.value === '' || popupLink.value === ''){
+    const buttonElement = popupPlace.querySelector(config.submitButtonSelector);
+    buttonElement.classList.add(config.inactiveButtonClass);
+    buttonElement.disabled = true;
+  }
 }
 
 additionButtonCard.addEventListener('click', addButtonCardClick);
@@ -132,7 +142,7 @@ function handleFormSubmitPlace (evt) {
   addCard(card, createdCard, false);
   closePopup(popupPlace);
 
-  newPlace.reset();
+  form.reset();
 }
 
 submitingFormPlace.addEventListener('submit', handleFormSubmitPlace);
